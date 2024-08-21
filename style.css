@@ -320,6 +320,7 @@ section {
 
 #experience {
     padding: 8vh 0.5%;
+    margin-top: 20rem;
     top: 10rem;
     position: relative;
   }
@@ -451,6 +452,7 @@ section {
 /* CONTACT */
 
 #contact {
+  margin-top: 10rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
