@@ -34,9 +34,14 @@ nav,
 }
 
 nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
   justify-content: space-around;
   align-items: center;
   height: 17vh;
+  background-color: white; 
 }
 
 .nav-links {
@@ -149,11 +154,11 @@ a:hover {
 /* SECTIONS */
 
 section {
-  padding-top: 4vh;
+  padding-top: calc(17vh + 6rem); /* Adjust the padding to account for the height of the nav */
   height: 96vh;
   margin: 0 10rem;
   box-sizing: border-box;
-  min-height: fit-content;
+  min-height: fit-content + 6rem;
 }
 
 .section-container {
@@ -167,6 +172,7 @@ section {
   justify-content: center;
   gap: 5rem;
   height: 80vh;
+  margin-bottom: 10rem;
 }
 
 .section__pic-container {
@@ -288,12 +294,6 @@ section {
   border-radius: 2rem;
 }
 
-.arrow {
-  position: absolute;
-  right: -5rem;
-  bottom: 2.5rem;
-}
-
 .details-container {
   padding: 1.5rem;
   flex: 1;
@@ -319,7 +319,7 @@ section {
 /*comment*/
 
 #experience {
-    padding: 8vh 0.5%;
+    padding: 17vh 0.5%;
     margin-top: 20rem;
     top: 10rem;
     position: relative;
@@ -399,7 +399,7 @@ section {
 #projects {
     position: relative;
     top: 2rem;
-    padding: 4vh 5%;
+    padding: 17vh 5%;
     bottom: 10rem;
   }
   
