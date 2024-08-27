@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The J.M. Smucker Co.</title>
+    <link rel="stylesheet" href="expstyle.css">
+</head>
+
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">Akshay Gona</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#experience">Experience</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="pageContainer">
+        <div class="pageContent">
+            <header class="header">
+                <h1 class="header-title">The J.M. Smucker Co.</h1>
+                <h2 class="header-position">Software Developer Intern</h2>
+                <p class="header-date">May 2024 - August 2024</p>
+            </header>
+
+            <main>
+                <section id="projects">
+                    <div class="project">
+                        <h3 class="project-title">Project 1: Revere</h3>
+                        <p class="project-description">Designed, built, and tested a full-stack, serverless, fully containerized 
+                            notification application that notifies developers when the application they are responsible for or working on runs into an issue. 
+                            Before the deployment of the application, users would have to be contacted by members of the Platform Services Team and manually notified of errors.
+                            The application closes the gap in communication, allowing users to configure their own notifications through mediums of their own choice(email, pagerduty, call).
+                            There are two main components involved in Revere. The first is the frontend, which is a React application that allows users to configure their notifications.
+                            The second is the backend, which is a serverless application that listens for errors and sends notifications to the users. The backend is a series of RESTful APIs, written 
+                            in Python, and deployed in a container. The frontend and backend containers are connected with Kubernetes and are deployed in the J.M. Smucker Co.'s Kubernetes cluster.
+                        </p>
+                    </div>
+
+                    <div class="project">
+                        <h3 class="project-title">Project 2: Prometheus</h3>
+                        <p class="project-description">Designed, built, and fine-tuned a model using parameter efficient tuning to generate new product concepts and zones for R&D exploration. After noticing a tangible gap
+                            in the machine learning and generative AI space, I decided to take on the challenge of creating a model that could generate new ideas for exploration based
+                            on data from consumer relations, Instagram, Twitter, Facebook, and scores of other sources. Stripped all of the data of irrelevant information and performed sentiment analysis
+                            on the data to determine the overall sentiment of the data. The model was trained on thousands of concepts and was able to generate new concepts with a high degree of accuracy given the
+                            limited data and resources available. I took on this project completely on my own, and was able to deliver a working model in a short amount of time. I presented my project 
+                            to teams and high-level executives and received positive feedback on the project. The model is currently being further fine-tuned and will be used in the future to generate new product concepts.
+                        </p>
+                    </div>
+                </section>
+
+                <section id="tech-stack">
+                    <h2 class="section-title">Tech Stack</h2>
+                    <ul>
+                        <li>Languages used: Python, JavaScript, Bash, SQL</li>
+                        <li>Frontend: React, Angular</li>
+                        <li>Backend: Node.js, Express, REST</li>
+                        <li>Database: MySQL, PostgreSQL, MongoDB</li>
+                        <li>Tools: Docker, Kubernetes, Jenkins, Git</li>
+                        <li>More DevOps: AWS, Netlify</li>
+                        <li>Other: Thycotic, Jupyter Notebook, Numpy, TensorFlow</li>
+                    </ul>
+                </section>
+            </main>
+
+            <footer>
+                <p>&copy; 2024 Akshay Gona. All Rights Reserved.</p>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>
