@@ -21,7 +21,7 @@ html {
 }
 
 p {
-  color: rgb(85, 85, 85);
+  color: 	#71906e;
 }
 
 /* DESKTOP NAV */
@@ -182,7 +182,7 @@ a:hover {
 
 .pageContent h2 {
   font-size: 2rem;
-  color: #2a2a2a;
+  color: rgb(85, 85, 85);
   font-weight: 500;
   margin-bottom: 10px;
 }
@@ -197,7 +197,7 @@ a:hover {
 .pageContent h4 {
   font-size: 1.3rem;
   font-weight: 100;
-  color: #2a2a2a;
+  color: rgb(85, 85, 85);
 }
 
 .pageContent p {
