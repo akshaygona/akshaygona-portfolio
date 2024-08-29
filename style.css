@@ -316,7 +316,7 @@ section {
 }
 
 /* EXPERIENCE SECTION */
-/*comment*/
+
 
 #experience {
     padding: 17vh 0.5%;
@@ -346,6 +346,7 @@ section {
     transform: scale(1);
     transition: transform 0.2s;
     color: inherit;
+    flex: 1 1 calc(50% - 2rem);
   }
   
   .experience-item:hover {
@@ -404,9 +405,11 @@ section {
   }
   
   .projects-container {
-    display: flex;
+    display: grid;
     flex-wrap: wrap;
     justify-content: space-between;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Creates a grid that adapts to the screen size */
+    gap: 2rem; /* Space between grid items */
   }
   
   .project {
@@ -417,6 +420,7 @@ section {
     border-radius: 2rem;
     padding: 1rem;
     box-sizing: border-box;
+    transition: all 0.3s;
   }
   
   .project-img-container {
@@ -474,7 +478,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 1 rem;
   margin: 1rem;
 }
 
@@ -495,10 +499,16 @@ section {
 footer {
   height: 26vh;
   margin: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
 }
 
 footer p {
   text-align: center;
+
 }
 
 

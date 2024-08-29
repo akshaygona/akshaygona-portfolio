@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Experience - Ultimo Software Solutions</title>
     <link rel="stylesheet" href="expstyle.css">
+    <link rel="stylesheet" href="mediaqueries.css" />
 </head>
 
 <body>
@@ -20,7 +21,22 @@
             </ul>
         </div>
     </nav>
-
+    <nav id="hamburger-nav">
+        <div class="logo">Akshay Gona</div>
+        <div class="hamburger-menu">
+          <div class="hamburger-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="menu-links">
+            <li><a href="index.html#projects" onclick="toggleMenu()">Projects</a></li>
+            <li><a href="index.html#experience" onclick="toggleMenu()">Experience</a></li>
+            <li><a href="index.html#about" onclick="toggleMenu()">About</a></li>
+            <li><a href="index.html#contact" onclick="toggleMenu()">Contact</a></li>
+          </div>
+        </div>
+      </nav>
     <div class="pageContainer">
         <div class="pageContent">
             <header class="header">
@@ -55,6 +71,7 @@
             <footer>
                 <p>&copy; 2024 Akshay Gona. All Rights Reserved.</p>
             </footer>
+            <script src="script.js"></script>
         </div>
     </div>
 </body>
