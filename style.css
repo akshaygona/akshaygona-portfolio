@@ -271,7 +271,7 @@ section {
 
 #about {
   position: relative;
-  top: 10rem;
+  top: 3rem;
 }
 
 .about-containers {
@@ -323,6 +323,8 @@ section {
     margin-top: 60rem;
     top: 10rem;
     position: relative;
+    height: auto;
+    min-height: 100vh;
   }
   
   .experience-container {
@@ -347,6 +349,7 @@ section {
     transition: transform 0.2s;
     color: inherit;
     flex: 1 1 calc(50% - 2rem);
+    max-width: calc(50% - 2rem);
   }
   
   .experience-item:hover {
