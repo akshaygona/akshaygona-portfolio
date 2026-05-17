@@ -1,79 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experience - Ultimo Software Solutions</title>
-    <link rel="stylesheet" href="expstyle.css">
-    <link rel="stylesheet" href="mediaqueries.css" />
-</head>
-
-<body>
-    <nav id="desktop-nav">
-        <div class="logo">Akshay Gona</div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="index.html#projects">Projects</a></li>
-                <li><a href="index.html#experience">Experience</a></li>
-                <li><a href="index.html#about">About</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
-            </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Akshay Gona — SWE Development Intern @ Ultimo Software Solutions
+    </title>
+    <meta name="theme-color" content="#07070b" />
+    <link rel="icon" href="./assets/usds-jv-logo.png" type="image/png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="nav" id="nav">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-brand">
+          <span class="logo-dot" aria-hidden="true"></span>
+          Akshay Gona
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html#current">Currently</a></li>
+          <li><a href="index.html#experience">Experience</a></li>
+          <li><a href="index.html#projects">Projects</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button
+            class="icon-btn theme-toggle"
+            id="theme-toggle"
+            aria-label="Toggle color theme"
+            type="button"
+          >
+            <svg
+              class="moon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
+            <svg
+              class="sun"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="4" />
+              <path
+                d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
+              />
+            </svg>
+          </button>
+          <button
+            class="icon-btn menu-btn"
+            id="menu-btn"
+            aria-label="Open menu"
+            aria-expanded="false"
+            type="button"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <line x1="3" y1="12" x2="21" y2="12" />
+              <line x1="3" y1="18" x2="21" y2="18" />
+            </svg>
+          </button>
         </div>
+      </div>
     </nav>
-    <nav id="hamburger-nav">
-        <div class="logo">Akshay Gona</div>
-        <div class="hamburger-menu">
-          <div class="hamburger-icon" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <div class="menu-links">
-            <li><a href="index.html#projects" onclick="toggleMenu()">Projects</a></li>
-            <li><a href="index.html#experience" onclick="toggleMenu()">Experience</a></li>
-            <li><a href="index.html#about" onclick="toggleMenu()">About</a></li>
-            <li><a href="index.html#contact" onclick="toggleMenu()">Contact</a></li>
-          </div>
-        </div>
-      </nav>
-    <div class="pageContainer">
-        <div class="pageContent">
-            <header class="header">
-                <h1 class="header-title">Ultimo Software Solutions</h1>
-                <h2 class="header-position">Software Engineering Development Intern</h2>
-                <p class="header-date">May 2023 - August 2023</p>
-            </header>
 
-            <main>
-                <section id="projects">
-                    <div class="project">
-                        <h3 class="project-title">Workato Dashboards / Data Visualization and Insights</h3>
-                        <p class="project-description"> Developed mappings to integrate and visualize complex business workflows for AT&T, 
-                            pulling data streams from platforms like Atlassian, Jira, and Salesforce. Additionally, I performed Data ETL 
-                            and analysis on Wells Fargo's grievances, appeals, and customer service touchpoints, aggregating data from various 
-                            systems to create a comprehensive view of customer interactions. These efforts contributed to enhanced data-driven 
-                            decision-making and improved customer experience insights.
-                        </p>
-                    </div>
-                </section>
-
-                <section id="tech-stack">
-                    <h2 class="section-title">Tech Stack</h2>
-                    <ul>
-                        <li>Languages used: Java, Apex</li>
-                        <li>Database: MySQL, MongoDB, S3</li>
-                        <li>Tools: Git, Workato</li>
-                    </ul>
-                </section>
-            </main>
-
-            <footer>
-                <p>&copy; 2025 Akshay Gona. All Rights Reserved.</p>
-            </footer>
-            <script src="script.js"></script>
-        </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <ul>
+        <li><a href="index.html#current">Currently</a></li>
+        <li><a href="index.html#experience">Experience</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
     </div>
-</body>
 
+    <main class="page exp-page">
+      <div class="container">
+        <a href="index.html#experience" class="exp-back">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="19" y1="12" x2="5" y2="12" />
+            <polyline points="12 19 5 12 12 5" />
+          </svg>
+          Back to all experience
+        </a>
+
+        <header class="exp-header">
+          <div>
+            <div class="exp-header-meta">May 2023 — August 2023</div>
+            <h1>Ultimo Software Solutions</h1>
+            <h2>Software Engineering Development Intern</h2>
+          </div>
+          <div class="exp-header-logo is-photo">
+            <img src="./assets/ultimo.png" alt="Ultimo" />
+          </div>
+        </header>
+
+        <div class="exp-content">
+          <div>
+            <section class="exp-section">
+              <h3 class="exp-section-title">Projects</h3>
+
+              <div class="exp-project">
+                <h3>
+                  Workato dashboards · Data visualization &amp; insights
+                </h3>
+                <p>
+                  Built mappings to integrate and visualize complex
+                  business workflows for AT&T — pulling streams from
+                  Atlassian, Jira, and Salesforce. Also did data ETL
+                  and analysis across Wells Fargo's grievances,
+                  appeals, and customer-service touchpoints, stitching
+                  together a single view of customer interactions
+                  across systems for richer downstream analytics.
+                </p>
+              </div>
+            </section>
+          </div>
+
+          <aside class="exp-aside">
+            <div class="exp-aside-card">
+              <h4>Tech stack</h4>
+              <div class="exp-stack">
+                <span class="tag">Java</span>
+                <span class="tag">Apex</span>
+                <span class="tag">SQL</span>
+                <span class="tag">MySQL</span>
+                <span class="tag">MongoDB</span>
+                <span class="tag">S3</span>
+                <span class="tag">Workato</span>
+                <span class="tag">Git</span>
+              </div>
+            </div>
+            <div class="exp-aside-card">
+              <h4>Where</h4>
+              <ul class="exp-aside-list">
+                <li>Ultimo Software Solutions</li>
+                <li>May 2023 — Aug 2023</li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-inner">
+          <div>&copy; 2026 Akshay Gona. All Rights Reserved.</div>
+          <div><a href="index.html">← Home</a></div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>

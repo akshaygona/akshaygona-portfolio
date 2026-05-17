@@ -1,7 +1,10 @@
-# My portfolio! 
+# Akshay Gona — Portfolio
 
 [akshaygona.com](https://akshaygona.com)
 
-Includes projects, experience, a quick bio, and contact.
+Personal portfolio site. Hand-built with vanilla HTML / CSS / JS — no
+framework, no build step.
 
-Please visit and feel free to reach out to me if you have any feedback!
+## Feedback
+
+Always welcome — drop me a note via [LinkedIn](https://www.linkedin.com/in/agona/) or `gona@wisc.edu`.

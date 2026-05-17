@@ -1,92 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experience - Cognizant</title>
-    <link rel="stylesheet" href="expstyle.css">
-    <link rel="stylesheet" href="mediaqueries.css" />
-
-</head>
-
-<body>
-    <nav id="desktop-nav">
-        <div class="logo">Akshay Gona</div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="index.html#projects">Projects</a></li>
-                <li><a href="index.html#experience">Experience</a></li>
-                <li><a href="index.html#about">About</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
-            </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Akshay Gona — Generative AI Extern @ Cognizant</title>
+    <meta name="theme-color" content="#07070b" />
+    <link rel="icon" href="./assets/usds-jv-logo.png" type="image/png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="nav" id="nav">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-brand">
+          <span class="logo-dot" aria-hidden="true"></span>
+          Akshay Gona
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html#current">Currently</a></li>
+          <li><a href="index.html#experience">Experience</a></li>
+          <li><a href="index.html#projects">Projects</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button
+            class="icon-btn theme-toggle"
+            id="theme-toggle"
+            aria-label="Toggle color theme"
+            type="button"
+          >
+            <svg
+              class="moon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
+            <svg
+              class="sun"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="4" />
+              <path
+                d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
+              />
+            </svg>
+          </button>
+          <button
+            class="icon-btn menu-btn"
+            id="menu-btn"
+            aria-label="Open menu"
+            aria-expanded="false"
+            type="button"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <line x1="3" y1="12" x2="21" y2="12" />
+              <line x1="3" y1="18" x2="21" y2="18" />
+            </svg>
+          </button>
         </div>
+      </div>
     </nav>
-    <nav id="hamburger-nav">
-        <div class="logo">Akshay Gona</div>
-        <div class="hamburger-menu">
-          <div class="hamburger-icon" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <div class="menu-links">
-            <li><a href="index.html#projects" onclick="toggleMenu()">Projects</a></li>
-            <li><a href="index.html#experience" onclick="toggleMenu()">Experience</a></li>
-            <li><a href="index.html#about" onclick="toggleMenu()">About</a></li>
-            <li><a href="index.html#contact" onclick="toggleMenu()">Contact</a></li>
-          </div>
-        </div>
-      </nav>
-    <div class="pageContainer">
-        <div class="pageContent">
-            <header class="header">
-                <h1 class="header-title">Cognizant</h1>
-                <h2 class="header-position">Generative AI Extern</h2>
-                <p class="header-date">April 2024 - August 2024</p>
-            </header>
 
-            <main>
-                <section id="projects">
-                    <div class="project">
-                        <h3 class="project-title">Project 1</h3>
-                        <p class="project-description">Developed a user-friendly Python package to simplify the creation and training of
-                             generative AI models. The package allows users to specify model types, training data, and desired outputs,
-                              automating the training process. Built with Python and TensorFlow, Genie streamlines AI model development 
-                              and is now being used by teams for creating and fine-tuning their own models.
-                        </p>
-                    </div>
-
-                    <div class="project">
-                        <h3 class="project-title">Project 2</h3>
-                        <p class="project-description">Designed and implemented a machine learning-based predictive maintenance system for 
-                            IT infrastructure. Leveraging a comprehensive dataset of performance metrics, maintenance logs, and failure patterns, 
-                            the system predicts equipment maintenance needs to minimize downtime and reduce costs. Developed using advanced machine 
-                            learning algorithms and integrated with existing infrastructure, Sentinel provides actionable insights and recommendations. 
-                            The project is currently in the testing phase and will soon be deployed.
-                        </p>
-                    </div>
-                </section>
-
-                <section id="tech-stack">
-                    <h2 class="section-title">Tech Stack</h2>
-                    <ul>
-                        <li>Languages used: Python, SQL, JavaScript, Bash</li>
-                        <li>Backend: TensorFlow, Node.js, Express, REST, scikit-learn, pandas</li>
-                        <li>Database: MySQL, PostgreSQL, MongoDB</li>
-                        <li>Tools: Docker, Kubernetes, Jenkins, Git, seaborn, matplotlib</li>
-                        <li>More DevOps: AWS</li>
-                        <li>Other: NumPy, Jupyter Notebook, TensorFlow, PyTorch</li>
-                    </ul>
-                </section>
-            </main>
-
-            <footer>
-                <p>&copy; 2025 Akshay Gona. All Rights Reserved.</p>
-            </footer>
-            <script src="script.js"></script>
-        </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <ul>
+        <li><a href="index.html#current">Currently</a></li>
+        <li><a href="index.html#experience">Experience</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
     </div>
-</body>
 
+    <main class="page exp-page">
+      <div class="container">
+        <a href="index.html#experience" class="exp-back">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="19" y1="12" x2="5" y2="12" />
+            <polyline points="12 19 5 12 12 5" />
+          </svg>
+          Back to all experience
+        </a>
+
+        <header class="exp-header">
+          <div>
+            <div class="exp-header-meta">April 2024 — August 2024</div>
+            <h1>Cognizant</h1>
+            <h2>Generative AI Extern</h2>
+          </div>
+          <div class="exp-header-logo is-photo">
+            <img src="./assets/cgnzt.jpg" alt="Cognizant" />
+          </div>
+        </header>
+
+        <div class="exp-content">
+          <div>
+            <section class="exp-section">
+              <h3 class="exp-section-title">Projects</h3>
+
+              <div class="exp-project">
+                <h3>Genie — Python package for generative AI</h3>
+                <p>
+                  Built a Python package that simplifies creating and
+                  training generative models. Users specify the model
+                  type, training data, and desired outputs, and Genie
+                  handles the training pipeline. Built on TensorFlow.
+                  Now used by other Cognizant teams to spin up and
+                  fine-tune their own models.
+                </p>
+              </div>
+
+              <div class="exp-project">
+                <h3>Sentinel — predictive maintenance for IT infra</h3>
+                <p>
+                  Designed and shipped an ML-based predictive
+                  maintenance system over performance metrics,
+                  maintenance logs, and failure patterns to predict
+                  when equipment needs attention before it breaks.
+                  Integrated with existing infra and produces
+                  actionable recommendations.
+                </p>
+              </div>
+            </section>
+          </div>
+
+          <aside class="exp-aside">
+            <div class="exp-aside-card">
+              <h4>Tech stack</h4>
+              <div class="exp-stack">
+                <span class="tag">Python</span>
+                <span class="tag">SQL</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">TensorFlow</span>
+                <span class="tag">PyTorch</span>
+                <span class="tag">scikit-learn</span>
+                <span class="tag">Pandas</span>
+                <span class="tag">Numpy</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">Express</span>
+                <span class="tag">MongoDB</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">Docker</span>
+                <span class="tag">Kubernetes</span>
+                <span class="tag">Jenkins</span>
+                <span class="tag">AWS</span>
+              </div>
+            </div>
+            <div class="exp-aside-card">
+              <h4>Where</h4>
+              <ul class="exp-aside-list">
+                <li>Cognizant</li>
+                <li>Apr 2024 — Aug 2024</li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-inner">
+          <div>&copy; 2026 Akshay Gona. All Rights Reserved.</div>
+          <div><a href="index.html">← Home</a></div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>

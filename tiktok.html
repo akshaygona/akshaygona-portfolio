@@ -1,64 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experience - TikTok</title>
-    <link rel="stylesheet" href="expstyle.css">
-    <link rel="stylesheet" href="mediaqueries.css">
-</head>
-
-<body>
-    <nav id="desktop-nav">
-        <div class="logo">Akshay Gona</div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="index.html#projects">Projects</a></li>
-                <li><a href="index.html#experience">Experience</a></li>
-                <li><a href="index.html#about">About</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
-            </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Akshay Gona — Software Engineer Intern @ TikTok</title>
+    <meta name="theme-color" content="#07070b" />
+    <link rel="icon" href="./assets/usds-jv-logo.png" type="image/png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="nav" id="nav">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-brand">
+          <span class="logo-dot" aria-hidden="true"></span>
+          Akshay Gona
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html#current">Currently</a></li>
+          <li><a href="index.html#experience">Experience</a></li>
+          <li><a href="index.html#projects">Projects</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button
+            class="icon-btn theme-toggle"
+            id="theme-toggle"
+            aria-label="Toggle color theme"
+            type="button"
+          >
+            <svg
+              class="moon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
+            <svg
+              class="sun"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="4" />
+              <path
+                d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
+              />
+            </svg>
+          </button>
+          <button
+            class="icon-btn menu-btn"
+            id="menu-btn"
+            aria-label="Open menu"
+            aria-expanded="false"
+            type="button"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <line x1="3" y1="12" x2="21" y2="12" />
+              <line x1="3" y1="18" x2="21" y2="18" />
+            </svg>
+          </button>
         </div>
+      </div>
     </nav>
-    <nav id="hamburger-nav">
-        <div class="logo">Akshay Gona</div>
-        <div class="hamburger-menu">
-          <div class="hamburger-icon" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <div class="menu-links">
-            <li><a href="index.html#projects" onclick="toggleMenu()">Projects</a></li>
-            <li><a href="index.html#experience" onclick="toggleMenu()">Experience</a></li>
-            <li><a href="index.html#about" onclick="toggleMenu()">About</a></li>
-            <li><a href="index.html#contact" onclick="toggleMenu()">Contact</a></li>
-          </div>
-        </div>
-      </nav>
-    <div class="pageContainer">
-        <div class="pageContent">
-            <header class="header">
-                <h1 class="header-title">TikTok</h1>
-                <h2 class="header-position">Software Engineer Intern</h2>
-                <p class="header-date">June 2025 - September 2025</p>
-            </header>
 
-            <main>
-                <section id="projects">
-                    <div class="project">
-                        <h3 class="project-title">I'll be working on the U.S. Data Security Team - More Info Soon!</h3>
-                    </div>
-                </section>
-            </main>
-
-            <footer>
-                <p>&copy; 2025 Akshay Gona. All Rights Reserved.</p>
-            </footer>
-            <script src="script.js"></script>
-        </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <ul>
+        <li><a href="index.html#current">Currently</a></li>
+        <li><a href="index.html#experience">Experience</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
     </div>
-</body>
 
+    <main class="page exp-page">
+      <div class="container">
+        <a href="index.html#experience" class="exp-back">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="19" y1="12" x2="5" y2="12" />
+            <polyline points="12 19 5 12 12 5" />
+          </svg>
+          Back to all experience
+        </a>
+
+        <header class="exp-header">
+          <div>
+            <div class="exp-header-meta">
+              June 2025 — September 2025
+            </div>
+            <h1>TikTok</h1>
+            <h2>Software Engineer Intern · U.S. Data Security</h2>
+            <div
+              class="featured-tags"
+              style="margin-top: 1rem; gap: 0.4rem"
+            >
+              <span class="tag">Internship</span>
+              <span class="tag">Big Data</span>
+              <span class="tag">Returned full-time</span>
+            </div>
+          </div>
+          <div class="exp-header-logo is-photo">
+            <img src="./assets/tiktok.png" alt="TikTok" />
+          </div>
+        </header>
+
+        <div class="exp-content">
+          <div>
+            <div class="exp-callout">
+              <strong>Quick context:</strong> This was my Summer 2025
+              internship on the
+              <strong>U.S. Data Security · Big Data Platform</strong>
+              team. After the summer, I came back full-time on the same
+              team — now under the
+              <a href="tiktok-jv.html">TikTok USDS JV</a> entity.
+            </div>
+
+            <section class="exp-section">
+              <h3 class="exp-section-title">What I worked on</h3>
+              <p style="color: var(--text-2); line-height: 1.7;">
+                I worked on the team that owns and operates TikTok's U.S.
+                big-data infrastructure — the Spark, ClickHouse, and
+                Doris clusters that power analytics on the order of
+                hundreds of petabytes. My summer was a deep dive into
+                cluster operations, query performance, and the developer
+                experience of running on top of these systems at scale.
+              </p>
+              <ul class="exp-bullets" style="margin-top: 1.25rem;">
+                <li>
+                  Shadowed and contributed to live operations on the
+                  team's
+                  <strong style="color: var(--text)">Spark / ClickHouse / Doris</strong>
+                  clusters.
+                </li>
+                <li>
+                  Built tooling that reduced toil on routine cluster
+                  maintenance and made platform metrics easier to act
+                  on.
+                </li>
+                <li>
+                  Wrote internal documentation and runbooks for the
+                  team's day-2 operations.
+                </li>
+                <li>
+                  Earned a return offer and came back full-time in
+                  January.
+                </li>
+              </ul>
+            </section>
+          </div>
+
+          <aside class="exp-aside">
+            <div class="exp-aside-card">
+              <h4>Stack</h4>
+              <div class="exp-stack">
+                <span class="tag">Apache Spark</span>
+                <span class="tag">ClickHouse</span>
+                <span class="tag">Apache Doris</span>
+                <span class="tag">Hadoop</span>
+                <span class="tag">Kubernetes</span>
+                <span class="tag">Python</span>
+                <span class="tag">Java</span>
+                <span class="tag">SQL</span>
+              </div>
+            </div>
+            <div class="exp-aside-card">
+              <h4>Where</h4>
+              <ul class="exp-aside-list">
+                <li>TikTok · U.S. Data Security</li>
+                <li>Big Data Platform team</li>
+                <li>Jun 2025 — Sep 2025</li>
+              </ul>
+            </div>
+            <div class="exp-aside-card">
+              <h4>Now</h4>
+              <ul class="exp-aside-list">
+                <li>
+                  <a
+                    href="tiktok-jv.html"
+                    style="color: var(--text); text-decoration: underline;"
+                    >Full-time @ TikTok USDS JV →</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-inner">
+          <div>&copy; 2026 Akshay Gona. All Rights Reserved.</div>
+          <div><a href="index.html">← Home</a></div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>

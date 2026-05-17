@@ -4,311 +4,1175 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Akshay's Portfolio</title>
+    <meta
+      name="description"
+      content="Akshay Gona — Software Engineer at TikTok USDS JV and Master's student at Georgia Tech. Big-data infrastructure: Spark, ClickHouse, Doris at 200PB+ scale."
+    />
+    <meta name="theme-color" content="#07070b" />
+    <title>Akshay Gona — Software Engineer</title>
+    <link rel="icon" href="./assets/usds-jv-logo.png" type="image/png" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+      crossorigin
+    />
   </head>
   <body>
-    <nav id="desktop-nav">
-      <div class="logo">Akshay Gona</div>
-      <div>
+    <!-- ============== NAV ============== -->
+    <nav class="nav" id="nav">
+      <div class="nav-inner">
+        <a href="#top" class="nav-brand">
+          <span class="logo-dot" aria-hidden="true"></span>
+          Akshay Gona
+        </a>
+
         <ul class="nav-links">
-          <li><a href="#projects">Projects</a></li>
+          <li><a href="#current">Currently</a></li>
           <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-      </div>
-    </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Akshay Gona</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
-    </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/profile-pic.png" alt="John Doe profile picture" />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">👋 Hey, I'm</p>
-        <h1 class="title">Akshay Gona</h1>
-        <p class="section__text__p2">Student | Software Engineer | Athlete</p>
-        <div class="btn-container">
+
+        <div class="nav-actions">
           <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/Akshay\'s Resume.pdf')"
+            class="icon-btn theme-toggle"
+            id="theme-toggle"
+            aria-label="Toggle color theme"
+            type="button"
           >
-            Download CV
+            <svg
+              class="moon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
+            <svg
+              class="sun"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="4" />
+              <path
+                d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
+              />
+            </svg>
           </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
+
+          <button
+            class="icon-btn menu-btn"
+            id="menu-btn"
+            aria-label="Open menu"
+            aria-expanded="false"
+            type="button"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <line x1="3" y1="12" x2="21" y2="12" />
+              <line x1="3" y1="18" x2="21" y2="18" />
+            </svg>
           </button>
         </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/agona/'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/akshaygona'"
-          />
+      </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobile-menu">
+      <ul>
+        <li><a href="#current">Currently</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- ============== HERO ============== -->
+    <header id="top" class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-text">
+            <span class="hero-status reveal">
+              <span class="status-dot" aria-hidden="true"></span>
+              Currently scaling 200PB+ at TikTok USDS JV
+            </span>
+
+            <h1 class="hero-title reveal reveal-delay-1">
+              Software Engineer<br />
+              building <span class="grad">at scale.</span>
+            </h1>
+
+            <p class="hero-sub reveal reveal-delay-2">
+              I'm Akshay — Software Engineer on the
+              <strong>Big Data Platform</strong> at TikTok USDS JV, where
+              I own and scale Spark, ClickHouse, and Doris clusters that
+              power analytics over <strong>200+ petabytes</strong>. By
+              night, an MS CS student at Georgia Tech specializing in
+              AI. Previously at Smucker's, Cognizant, and Scale AI.
+            </p>
+
+            <div class="hero-actions reveal reveal-delay-3">
+              <a
+                class="btn btn-primary"
+                href="./assets/Akshay's Resume.pdf"
+                target="_blank"
+                rel="noopener"
+              >
+                Download CV
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <polyline points="7 10 12 15 17 10" />
+                  <line x1="12" y1="15" x2="12" y2="3" />
+                </svg>
+              </a>
+              <a class="btn btn-secondary" href="#contact">
+                Get in touch
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="7" y1="17" x2="17" y2="7" />
+                  <polyline points="7 7 17 7 17 17" />
+                </svg>
+              </a>
+            </div>
+
+            <div class="hero-meta reveal reveal-delay-3">
+              <span class="hero-meta-item">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                  />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                San Jose, CA · Bay Area
+              </span>
+              <span class="hero-meta-item">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="2" y="4" width="20" height="16" rx="2" />
+                  <path d="M22 7L12 13 2 7" />
+                </svg>
+                agona6@gatech.edu
+              </span>
+              <span class="hero-meta-item">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M12 2L2 7v6c0 5 4 9 10 9s10-4 10-9V7L12 2z" />
+                </svg>
+                Georgia Tech · MS CS, AI
+              </span>
+            </div>
+          </div>
+
+          <div class="hero-card reveal reveal-delay-2">
+            <div class="hero-card-frame">
+              <img src="./assets/profile-pic.png" alt="Akshay Gona" />
+            </div>
+            <div class="hero-card-tag">
+              <div class="av">AG</div>
+              <div class="hero-card-tag-text">
+                <strong>TikTok USDS JV</strong>
+                <span class="sep" aria-hidden="true"></span>
+                <span class="muted">Full-time SWE</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tech stack marquee -->
+      <div class="container" style="margin-top: 3.5rem">
+        <div class="marquee">
+          <div class="marquee-track">
+            <span class="marquee-item">Apache Spark</span>
+            <span class="marquee-item">ClickHouse</span>
+            <span class="marquee-item">Apache Doris</span>
+            <span class="marquee-item">Kubernetes</span>
+            <span class="marquee-item">Kafka</span>
+            <span class="marquee-item">Hadoop / HDFS</span>
+            <span class="marquee-item">Iceberg</span>
+            <span class="marquee-item">Trino</span>
+            <span class="marquee-item">Airflow</span>
+            <span class="marquee-item">Python</span>
+            <span class="marquee-item">Scala</span>
+            <span class="marquee-item">Java</span>
+            <span class="marquee-item">Go</span>
+            <span class="marquee-item">SQL</span>
+            <span class="marquee-item">Terraform</span>
+            <span class="marquee-item">Prometheus</span>
+            <!-- duplicate for infinite scroll -->
+            <span class="marquee-item">Apache Spark</span>
+            <span class="marquee-item">ClickHouse</span>
+            <span class="marquee-item">Apache Doris</span>
+            <span class="marquee-item">Kubernetes</span>
+            <span class="marquee-item">Kafka</span>
+            <span class="marquee-item">Hadoop / HDFS</span>
+            <span class="marquee-item">Iceberg</span>
+            <span class="marquee-item">Trino</span>
+            <span class="marquee-item">Airflow</span>
+            <span class="marquee-item">Python</span>
+            <span class="marquee-item">Scala</span>
+            <span class="marquee-item">Java</span>
+            <span class="marquee-item">Go</span>
+            <span class="marquee-item">SQL</span>
+            <span class="marquee-item">Terraform</span>
+            <span class="marquee-item">Prometheus</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ============== CURRENTLY ============== -->
+    <section id="current" class="featured">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Currently</span>
+          <h2 class="section-title">Where I am right now</h2>
+          <p class="section-lede">
+            Operating one of the largest data platforms on the planet —
+            and chipping away at an MS CS in AI on the side.
+          </p>
+        </div>
+
+        <a href="tiktok-jv.html" class="featured-card reveal reveal-delay-1" style="text-decoration: none; color: inherit;">
+          <div class="featured-text">
+            <span class="featured-pill">
+              <span class="status-dot" aria-hidden="true"></span>
+              Active · Jan 2026 — Present
+            </span>
+            <h3 class="featured-title">TikTok USDS JV</h3>
+            <p class="featured-role">
+              <strong>Software Engineer</strong> · Big Data Platform
+            </p>
+            <p class="featured-desc">
+              Owning, optimizing, and scaling the data infrastructure that
+              powers TikTok's U.S. analytics — Spark, ClickHouse, and
+              Doris clusters at <strong style="color: var(--text);">~200 PB</strong>
+              scale. Same team I interned on; now here full-time.
+            </p>
+
+            <div class="featured-stats">
+              <div class="stat">
+                <div class="stat-value">~200 PB</div>
+                <div class="stat-label">Data under management</div>
+              </div>
+              <div class="stat">
+                <div class="stat-value">Spark</div>
+                <div class="stat-label">+ ClickHouse + Doris</div>
+              </div>
+              <div class="stat">
+                <div class="stat-value">USDS JV</div>
+                <div class="stat-label">U.S. Data Security</div>
+              </div>
+            </div>
+
+            <div class="featured-tags">
+              <span class="tag">Apache Spark</span>
+              <span class="tag">ClickHouse</span>
+              <span class="tag">Apache Doris</span>
+              <span class="tag">Kubernetes</span>
+              <span class="tag">Cluster ops</span>
+              <span class="tag">Performance tuning</span>
+              <span class="tag">Cost optimization</span>
+            </div>
+
+            <span class="btn btn-secondary" style="pointer-events: none;">
+              Read more
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="7" y1="17" x2="17" y2="7" />
+                <polyline points="7 7 17 7 17 17" />
+              </svg>
+            </span>
+          </div>
+
+          <div class="featured-visual">
+            <img
+              class="featured-logo"
+              src="./assets/usds-jv-logo.png"
+              alt="TikTok USDS JV"
+            />
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============== EXPERIENCE TIMELINE ============== -->
+    <section id="experience">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Experience</span>
+          <h2 class="section-title">A few places I've shipped.</h2>
+          <p class="section-lede">
+            Five years of building — from data labeling pipelines and
+            generative-AI tooling to enterprise platforms and big-data
+            infrastructure.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <a
+            href="tiktok-jv.html"
+            class="exp-card exp-card-current reveal"
+          >
+            <div class="exp-card-logo">
+              <div class="exp-card-logo-img">
+                <img src="./assets/usds-jv-logo.png" alt="TikTok USDS JV" />
+              </div>
+              <div>
+                <div class="exp-card-co">TikTok USDS JV</div>
+                <div class="exp-card-co-sub">Jan 2026 — Present</div>
+              </div>
+            </div>
+            <div>
+              <div class="exp-card-role">Software Engineer</div>
+              <div class="exp-card-role-desc">
+                Big Data Platform · Spark / ClickHouse / Doris at 200PB+
+              </div>
+            </div>
+            <span class="exp-card-arrow" aria-hidden="true">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="7" y1="17" x2="17" y2="7" />
+                <polyline points="7 7 17 7 17 17" />
+              </svg>
+            </span>
+          </a>
+
+          <a href="tiktok.html" class="exp-card reveal reveal-delay-1">
+            <div class="exp-card-logo">
+              <div class="exp-card-logo-img is-photo">
+                <img src="./assets/tiktok.png" alt="TikTok" />
+              </div>
+              <div>
+                <div class="exp-card-co">TikTok</div>
+                <div class="exp-card-co-sub">Jun 2025 — Sep 2025</div>
+              </div>
+            </div>
+            <div>
+              <div class="exp-card-role">Software Engineer Intern</div>
+              <div class="exp-card-role-desc">
+                U.S. Data Security · Big Data Platform team
+              </div>
+            </div>
+            <span class="exp-card-arrow" aria-hidden="true">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="7" y1="17" x2="17" y2="7" />
+                <polyline points="7 7 17 7 17 17" />
+              </svg>
+            </span>
+          </a>
+
+          <a href="jms.html" class="exp-card reveal reveal-delay-2">
+            <div class="exp-card-logo">
+              <div class="exp-card-logo-img is-photo">
+                <img src="./assets/jms.png" alt="The J.M. Smucker Co." />
+              </div>
+              <div>
+                <div class="exp-card-co">The J.M. Smucker Co.</div>
+                <div class="exp-card-co-sub">May 2024 — Aug 2024</div>
+              </div>
+            </div>
+            <div>
+              <div class="exp-card-role">Software Developer Intern</div>
+              <div class="exp-card-role-desc">
+                Built Revere (alerting) & Prometheus (genAI for R&D)
+              </div>
+            </div>
+            <span class="exp-card-arrow" aria-hidden="true">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="7" y1="17" x2="17" y2="7" />
+                <polyline points="7 7 17 7 17 17" />
+              </svg>
+            </span>
+          </a>
+
+          <a href="cgznt.html" class="exp-card reveal">
+            <div class="exp-card-logo">
+              <div class="exp-card-logo-img is-photo">
+                <img src="./assets/cgnzt.jpg" alt="Cognizant" />
+              </div>
+              <div>
+                <div class="exp-card-co">Cognizant</div>
+                <div class="exp-card-co-sub">Apr 2024 — Aug 2024</div>
+              </div>
+            </div>
+            <div>
+              <div class="exp-card-role">Generative AI Extern</div>
+              <div class="exp-card-role-desc">
+                Built Genie — a Python package for training generative models
+              </div>
+            </div>
+            <span class="exp-card-arrow" aria-hidden="true">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="7" y1="17" x2="17" y2="7" />
+                <polyline points="7 7 17 7 17 17" />
+              </svg>
+            </span>
+          </a>
+
+          <a href="scle.html" class="exp-card reveal reveal-delay-1">
+            <div class="exp-card-logo">
+              <div class="exp-card-logo-img is-photo">
+                <img src="./assets/scale.jpg" alt="Scale AI" />
+              </div>
+              <div>
+                <div class="exp-card-co">Scale AI</div>
+                <div class="exp-card-co-sub">Feb 2024 — May 2024</div>
+              </div>
+            </div>
+            <div>
+              <div class="exp-card-role">AI/ML Intern — Training Data</div>
+              <div class="exp-card-role-desc">
+                Fine-tuning LLMs (GPT-3.5, BERT, T5) for downstream tasks
+              </div>
+            </div>
+            <span class="exp-card-arrow" aria-hidden="true">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="7" y1="17" x2="17" y2="7" />
+                <polyline points="7 7 17 7 17 17" />
+              </svg>
+            </span>
+          </a>
+
+          <a href="ultmo.html" class="exp-card reveal reveal-delay-2">
+            <div class="exp-card-logo">
+              <div class="exp-card-logo-img is-photo">
+                <img src="./assets/ultimo.png" alt="Ultimo" />
+              </div>
+              <div>
+                <div class="exp-card-co">Ultimo Software Solutions</div>
+                <div class="exp-card-co-sub">May 2023 — Aug 2023</div>
+              </div>
+            </div>
+            <div>
+              <div class="exp-card-role">SWE Development Intern</div>
+              <div class="exp-card-role-desc">
+                Workato dashboards & ETL for AT&T and Wells Fargo
+              </div>
+            </div>
+            <span class="exp-card-arrow" aria-hidden="true">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="7" y1="17" x2="17" y2="7" />
+                <polyline points="7 7 17 7 17 17" />
+              </svg>
+            </span>
+          </a>
         </div>
       </div>
     </section>
+
+    <!-- ============== PROJECTS ============== -->
     <section id="projects">
-        <p class="section__text__p1">Browse My Recent</p>
-        <h1 class="title">Projects</h1>
-        <div class="projects-container">
-          <!-- Project 1 -->
-          <div class="project">
-            <div class="project-img-container">
-              <img src="./assets/project-1.png" alt="Project 1" class="project-img" />
-            </div>
-            <h2 class="project-title">PokerProCalc</h2>
-            <p class="project-description">A poker odds calculator and range prediction tool.</p>
-            <div class="btn-container">
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/akshaygona/PokerProCalc'">Github</button>
-            </div>
-          </div>
-          <!-- Project 2 -->
-          <div class="project">
-            <div class="project-img-container">
-              <img src="./assets/project-2.png" alt="Project 2" class="project-img" />
-            </div>
-            <h2 class="project-title">tExtractor</h2>
-            <p class="project-description">A program which extracts text from PDFs and images using OCR.</p>
-            <div class="btn-container">
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/akshaygona/textractor'">Github</button>
-            </div>
-          </div>
-          <!-- Project 3 -->
-          <div class="project">
-            <div class="project-img-container">
-              <img src="./assets/project-3.png" alt="Project 3" class="project-img" />
-            </div>
-            <h2 class="project-title">Leetcode</h2>
-            <p class="project-description">My solutions to leetcode, hackerrank, and other problems!</p>
-            <div class="btn-container">
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/akshaygona/leetcode'">Github</button>
-            </div>
-          </div>
-          <!-- Project 4 -->
-          <div class="project">
-            <div class="project-img-container">
-              <img src="./assets/project-4.png" alt="Project 4" class="project-img" />
-            </div>
-            <h2 class="project-title">PNDaptitude</h2>
-            <p class="project-description">Breaking into Pandas and Data Science with Python.</p>
-            <div class="btn-container">
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/akshaygona/pandaspractice'">Github</button>
-            </div>
-          </div>
-          <!-- Project 5 -->
-          <div class="project">
-            <div class="project-img-container">
-              <img src="./assets/project-5.png" alt="Project 5" class="project-img" />
-            </div>
-            <h2 class="project-title">ALGaptitude</h2>
-            <p class="project-description">Collection of my implementation of some popular algorithms.</p>
-            <div class="btn-container">
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/akshaygona/algorithmsPractice'">Github</button>
-            </div>
-          </div>
-          <!-- Project 6 -->
-          <div class="project">
-            <div class="project-img-container">
-              <img src="./assets/project-6.png" alt="Project 6" class="project-img" />
-            </div>
-            <h2 class="project-title">This Website!</h2>
-            <p class="project-description">My portfolio, experience, contact info, and some other information.</p>
-            <div class="btn-container">
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/akshaygona/akshaygona-portfolio'">Github</button>
-            </div>
-          </div>
-          <!-- Project 7 -->
-          <div class="project">
-            <div class="project-img-container">
-              <img src="./assets/dog.png" alt="Project 6" class="project-img" />
-            </div>
-            <h2 class="project-title">DogImageClassifier</h2>
-            <p class="project-description">Tool that classifies dog breeds using pre-trained, refined models.</p>
-            <div class="btn-container">
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/akshaygona/dogImageClassifier'">Github</button>
-            </div>
-          </div>
-          <!-- Project 8 -->
-          <div class="project">
-            <div class="project-img-container">
-              <img src="./assets/heap.png" alt="Project 6" class="project-img" />
-            </div>
-            <h2 class="project-title">EasyHeap</h2>
-            <p class="project-description">An implementation of a heap with best-fit placement, entirely in C.</p>
-            <div class="btn-container">
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/akshaygona/Heap-Implementation-in-C'">Github</button>
-            </div>
-          </div>
-          <!-- Project 9 -->
-          <div class="project">
-            <div class="project-img-container">
-              <img src="./assets/sdku.png" alt="Project 6" class="project-img" />
-            </div>
-            <h2 class="project-title">SDKU</h2>
-            <p class="project-description">Program that checks if a filled sudoku board is valid or not.</p>
-            <div class="btn-container">
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/akshaygona/Sudoku-in-C'">Github</button>
-            </div>
-          </div>
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Projects</span>
+          <h2 class="section-title">Things I've built on the side.</h2>
+          <p class="section-lede">
+            Bits and pieces from late nights, weekends, and side quests —
+            tools, experiments, and study companions.
+          </p>
         </div>
-    </div>
-      </section>
-      <section id="experience">
-        <p class="section__text__p1">My Work Experience</p>
-        <h1 class="title">Experience</h1>
-        <div class="experience-container">
-          <!-- Experience Item 1 -->
-          <div class="experience-item" onclick="window.location.href='tiktok.html';" style="cursor: pointer;">
-            <div class="top-experience">
-              <img src="./assets/tiktok.png" alt="Experience 1" />
+
+        <div class="projects-grid">
+          <a
+            href="https://github.com/akshaygona/PokerProCalc"
+            target="_blank"
+            rel="noopener"
+            class="project-card reveal"
+          >
+            <div class="project-thumb">
+              <img src="./assets/project-1.png" alt="PokerProCalc" />
             </div>
-            <div class="bottom-experience">
-              <h2>Software Engineer Intern</h2>
-              <h3>TikTok</h3>
-              <h4>June 2025 - September 2025</h4>
+            <div class="project-body">
+              <div class="project-name">
+                PokerProCalc
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="7" y1="17" x2="17" y2="7" />
+                  <polyline points="7 7 17 7 17 17" />
+                </svg>
+              </div>
+              <p class="project-desc">
+                Poker odds calculator and range-prediction tool with a
+                lightweight UI for live decision making.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Probability</span>
+              </div>
             </div>
-          </div>
-          <!-- Experience Item 2 -->
-          <div class="experience-item" onclick="window.location.href='jms.html';" style="cursor: pointer;">
-            <div class="top-experience">
-              <img src="./assets/jms.png" alt="Experience 2" />
+          </a>
+
+          <a
+            href="https://github.com/akshaygona/textractor"
+            target="_blank"
+            rel="noopener"
+            class="project-card reveal reveal-delay-1"
+          >
+            <div class="project-thumb">
+              <img src="./assets/project-2.png" alt="tExtractor" />
             </div>
-            <div class="bottom-experience">
-              <h2>Software Developer Intern</h2>
-              <h3>The J.M. Smucker Co.</h3>
-              <h4>May 2024 - August 2024</h4>
+            <div class="project-body">
+              <div class="project-name">
+                tExtractor
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="7" y1="17" x2="17" y2="7" />
+                  <polyline points="7 7 17 7 17 17" />
+                </svg>
+              </div>
+              <p class="project-desc">
+                Pulls clean, structured text out of PDFs and images using
+                OCR pipelines.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Tesseract</span>
+                <span class="tag">OCR</span>
+              </div>
             </div>
-          </div>
-          <!-- Experience Item 3 -->
-          <div class="experience-item" onclick="window.location.href='cgznt.html';" style="cursor: pointer;">
-            <div class="top-experience">
-              <img src="./assets/cgnzt.jpg" alt="Experience 3" />
+          </a>
+
+          <a
+            href="https://github.com/akshaygona/leetcode"
+            target="_blank"
+            rel="noopener"
+            class="project-card reveal reveal-delay-2"
+          >
+            <div class="project-thumb">
+              <img src="./assets/project-3.png" alt="Leetcode" />
             </div>
-            <div class="bottom-experience">
-              <h2>Generative AI Extern</h2>
-              <h3>Cognizant</h3>
-              <h4>April 2024 - August 2024</h4>
+            <div class="project-body">
+              <div class="project-name">
+                Leetcode
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="7" y1="17" x2="17" y2="7" />
+                  <polyline points="7 7 17 7 17 17" />
+                </svg>
+              </div>
+              <p class="project-desc">
+                A long-running collection of my LeetCode, HackerRank, and
+                competitive-programming solutions.
+              </p>
+              <div class="project-tags">
+                <span class="tag">DSA</span>
+                <span class="tag">Practice</span>
+              </div>
             </div>
-          </div>
-          <!-- Experience Item 4 -->
-          <div class="experience-item" onclick="window.location.href='scle.html';" style="cursor: pointer;">
-            <div class="top-experience">
-              <img src="./assets/scale.jpg" alt="Experience 4" />
+          </a>
+
+          <a
+            href="https://github.com/akshaygona/pandaspractice"
+            target="_blank"
+            rel="noopener"
+            class="project-card reveal"
+          >
+            <div class="project-thumb">
+              <img src="./assets/project-4.png" alt="PNDaptitude" />
             </div>
-            <div class="bottom-experience">
-              <h2>AI/ML Intern - Training Data</h2>
-              <h3>Scale AI</h3>
-              <h4>February 2024 - May 2024</h4>
+            <div class="project-body">
+              <div class="project-name">
+                PNDaptitude
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="7" y1="17" x2="17" y2="7" />
+                  <polyline points="7 7 17 7 17 17" />
+                </svg>
+              </div>
+              <p class="project-desc">
+                Notebook-style deep dive into Pandas and the foundations
+                of practical data science in Python.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Pandas</span>
+                <span class="tag">Numpy</span>
+                <span class="tag">Jupyter</span>
+              </div>
             </div>
-          </div>
-          <!-- Experience Item 5 -->
-          <div class="experience-item" onclick="window.location.href='ultmo.html';" style="cursor: pointer;">
-            <div class="top-experience">
-              <img src="./assets/ultimo.png" alt="Experience 5" />
+          </a>
+
+          <a
+            href="https://github.com/akshaygona/algorithmsPractice"
+            target="_blank"
+            rel="noopener"
+            class="project-card reveal reveal-delay-1"
+          >
+            <div class="project-thumb">
+              <img src="./assets/project-5.png" alt="ALGaptitude" />
             </div>
-            <div class="bottom-experience">
-              <h2>Software Engineering Development Intern</h2>
-              <h3>Ultimo Software Solutions</h3>
-              <h4>May 2023 - August 2023</h4>
+            <div class="project-body">
+              <div class="project-name">
+                ALGaptitude
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="7" y1="17" x2="17" y2="7" />
+                  <polyline points="7 7 17 7 17 17" />
+                </svg>
+              </div>
+              <p class="project-desc">
+                From-scratch implementations of classic algorithms — sorts,
+                graph traversals, DP, and more.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Algorithms</span>
+                <span class="tag">C / Java</span>
+              </div>
             </div>
-          </div>
+          </a>
+
+          <a
+            href="https://github.com/akshaygona/dogImageClassifier"
+            target="_blank"
+            rel="noopener"
+            class="project-card reveal reveal-delay-2"
+          >
+            <div class="project-thumb">
+              <img src="./assets/dog.png" alt="DogImageClassifier" />
+            </div>
+            <div class="project-body">
+              <div class="project-name">
+                DogImageClassifier
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="7" y1="17" x2="17" y2="7" />
+                  <polyline points="7 7 17 7 17 17" />
+                </svg>
+              </div>
+              <p class="project-desc">
+                Pre-trained CNN, fine-tuned on a custom dataset, for
+                classifying dog breeds from photos.
+              </p>
+              <div class="project-tags">
+                <span class="tag">PyTorch</span>
+                <span class="tag">Transfer learning</span>
+              </div>
+            </div>
+          </a>
+
+          <a
+            href="https://github.com/akshaygona/Heap-Implementation-in-C"
+            target="_blank"
+            rel="noopener"
+            class="project-card reveal"
+          >
+            <div class="project-thumb">
+              <img src="./assets/heap.png" alt="EasyHeap" />
+            </div>
+            <div class="project-body">
+              <div class="project-name">
+                EasyHeap
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="7" y1="17" x2="17" y2="7" />
+                  <polyline points="7 7 17 7 17 17" />
+                </svg>
+              </div>
+              <p class="project-desc">
+                A hand-rolled best-fit memory allocator written entirely
+                in C — explicit free lists, coalescing, the works.
+              </p>
+              <div class="project-tags">
+                <span class="tag">C</span>
+                <span class="tag">Systems</span>
+              </div>
+            </div>
+          </a>
+
+          <a
+            href="https://github.com/akshaygona/Sudoku-in-C"
+            target="_blank"
+            rel="noopener"
+            class="project-card reveal reveal-delay-1"
+          >
+            <div class="project-thumb">
+              <img src="./assets/sdku.png" alt="SDKU" />
+            </div>
+            <div class="project-body">
+              <div class="project-name">
+                SDKU
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="7" y1="17" x2="17" y2="7" />
+                  <polyline points="7 7 17 7 17 17" />
+                </svg>
+              </div>
+              <p class="project-desc">
+                Sudoku validity checker in C. Tight, fast, and a great
+                exercise in array indexing.
+              </p>
+              <div class="project-tags">
+                <span class="tag">C</span>
+                <span class="tag">Puzzles</span>
+              </div>
+            </div>
+          </a>
+
+          <a
+            href="https://github.com/akshaygona/akshaygona-portfolio"
+            target="_blank"
+            rel="noopener"
+            class="project-card reveal reveal-delay-2"
+          >
+            <div class="project-thumb">
+              <img src="./assets/project-6.png" alt="This site" />
+            </div>
+            <div class="project-body">
+              <div class="project-name">
+                This site
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="7" y1="17" x2="17" y2="7" />
+                  <polyline points="7 7 17 7 17 17" />
+                </svg>
+              </div>
+              <p class="project-desc">
+                The portfolio you're reading right now — hand-built with
+                vanilla HTML / CSS / JS, no framework.
+              </p>
+              <div class="project-tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">Vanilla JS</span>
+              </div>
+            </div>
+          </a>
         </div>
-    </div>
-      </section>
+      </div>
+    </section>
+
+    <!-- ============== ABOUT ============== -->
     <section id="about">
-      <p class="section__text__p1">Get To Know A Little More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./assets/about-pic.png"
-            alt="Profile picture"
-            class="about-pic"
-          />
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">About</span>
+          <h2 class="section-title">A bit about me.</h2>
+          <p class="section-lede">
+            Engineer who got hooked on big-data systems and never quite
+            looked back.
+          </p>
         </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>3+ years <br />Software Development - Full-Stack, Machine Learning, Generative AI</p>
-            </div>
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>University of Wisconsin - Madison<br />B.Sc. Computer Sciences, Data Science, Mathematics</p>
-            </div>
+
+        <div class="about-grid">
+          <div class="about-photo reveal">
+            <img src="./assets/about-pic.png" alt="Akshay Gona" />
           </div>
-          <div class="text-container">
+
+          <div class="about-bio reveal reveal-delay-1">
             <p>
-                I'm an undergraduate student at the University of Wisconsin - Madison studying Computer Sciences, 
-                Data Science, and Mathematics. I have a passion for software development and have experience working 
-                on full-stack web applications, machine learning models, and generative AI projects. I'm always looking 
-                for new opportunities to learn and grow as a software engineer.
-                In my free time, I play volleyball, enjoy hiking and camping, and am currently training for a half-marathon!
+              In January 2026, I started full-time at
+              <strong>TikTok USDS JV</strong> on the Big Data Platform
+              team — the same team I interned on in 2025, now under the
+              U.S. data-security joint venture spun out alongside
+              Oracle, Silver Lake, and MGX. I'm based in
+              <strong>San Jose</strong>, in the heart of the Bay Area.
             </p>
+            <p>
+              I graduated from the
+              <strong>University of Wisconsin–Madison</strong> in
+              December 2025 with degrees in Computer Sciences, Data
+              Science, and Mathematics. I'm now also a part-time MS
+              student at <strong>Georgia Tech</strong> in Computer
+              Science, specializing in <strong>Artificial Intelligence</strong>.
+            </p>
+            <p>
+              Day-to-day, I work on
+              <strong>Spark, ClickHouse, and Doris clusters</strong> —
+              owning, scaling, and optimizing them so analytics workloads
+              over <strong>200+ petabytes</strong> stay fast, cheap, and
+              reliable.
+            </p>
+            <p>
+              Before TikTok, I shipped serverless alerting tooling and
+              fine-tuned generative models at
+              <strong>The J.M. Smucker Co.</strong>, built a generative-AI
+              Python package at <strong>Cognizant</strong>, and trained
+              LLMs at <strong>Scale AI</strong>.
+            </p>
+            <p>
+              Outside of work, I play
+              <strong>volleyball</strong> and <strong>golf</strong>, and
+              am currently training for a <strong>full marathon</strong>.
+            </p>
+          </div>
+        </div>
+
+        <div class="about-cards reveal reveal-delay-2">
+          <div class="about-card">
+            <div class="about-card-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+              </svg>
+            </div>
+            <h3>Now</h3>
+            <p>
+              Software Engineer @ TikTok USDS JV · Big Data Platform ·
+              San Jose, CA.
+            </p>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                <path d="M6 12v5c3 3 9 3 12 0v-5" />
+              </svg>
+            </div>
+            <h3>Education</h3>
+            <p>
+              MS CS (AI) @ Georgia Tech · BS @ UW–Madison '25 (CS,
+              Data Science, Math).
+            </p>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <ellipse cx="12" cy="12" rx="10" ry="4" />
+                <path d="M2 12c0 5.5 4.5 10 10 10s10-4.5 10-10" />
+                <path d="M2 12c0-5.5 4.5-10 10-10s10 4.5 10 10" />
+              </svg>
+            </div>
+            <h3>Focus</h3>
+            <p>
+              Big-data platforms, query engines, distributed storage,
+              AI systems.
+            </p>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M3 12a9 9 0 1 0 18 0 9 9 0 1 0-18 0z" />
+                <path d="M12 8v4l3 2" />
+              </svg>
+            </div>
+            <h3>Off the clock</h3>
+            <p>
+              Volleyball, golf, and training for a full marathon.
             </p>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- ============== CONTACT ============== -->
     <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:gona@wisc.edu">Email</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com/in/agona/">LinkedIn</a></p>
+      <div class="container">
+        <div class="contact-card reveal">
+          <div class="contact-text">
+            <span class="eyebrow">Contact</span>
+            <h2>Let's talk shop.</h2>
+            <p>
+              Always down to chat about big-data systems, distributed
+              compute, side projects, or just trade book recs.
+            </p>
+            <p style="font-size: 0.9rem; color: var(--text-3)">
+              Best reachable via email or LinkedIn.
+            </p>
+          </div>
+
+          <div class="contact-links">
+            <a
+              class="contact-link"
+              href="mailto:agona6@gatech.edu"
+              target="_blank"
+              rel="noopener"
+            >
+              <span class="contact-link-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="2" y="4" width="20" height="16" rx="2" />
+                  <path d="M22 7L12 13 2 7" />
+                </svg>
+              </span>
+              <span class="contact-link-meta">
+                <strong>Email</strong>
+                <span>agona6@gatech.edu</span>
+              </span>
+              <span class="contact-link-arrow">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="7" y1="17" x2="17" y2="7" />
+                  <polyline points="7 7 17 7 17 17" />
+                </svg>
+              </span>
+            </a>
+
+            <a
+              class="contact-link"
+              href="https://www.linkedin.com/in/agona/"
+              target="_blank"
+              rel="noopener"
+            >
+              <span class="contact-link-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.59 0 4.25 2.36 4.25 5.43v6.31zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45C23.21 24 24 23.23 24 22.27V1.72C24 .77 23.21 0 22.22 0z"
+                  />
+                </svg>
+              </span>
+              <span class="contact-link-meta">
+                <strong>LinkedIn</strong>
+                <span>linkedin.com/in/agona</span>
+              </span>
+              <span class="contact-link-arrow">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="7" y1="17" x2="17" y2="7" />
+                  <polyline points="7 7 17 7 17 17" />
+                </svg>
+              </span>
+            </a>
+
+            <a
+              class="contact-link"
+              href="https://github.com/akshaygona"
+              target="_blank"
+              rel="noopener"
+            >
+              <span class="contact-link-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"
+                  />
+                </svg>
+              </span>
+              <span class="contact-link-meta">
+                <strong>GitHub</strong>
+                <span>github.com/akshaygona</span>
+              </span>
+              <span class="contact-link-arrow">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="7" y1="17" x2="17" y2="7" />
+                  <polyline points="7 7 17 7 17 17" />
+                </svg>
+              </span>
+            </a>
+          </div>
         </div>
       </div>
     </section>
-    <footer>
-      <p>Copyright &#169; 2024 Akshay Gona. All Rights Reserved.</p>
+
+    <!-- ============== FOOTER ============== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-inner">
+          <div>
+            &copy; <span id="year">2026</span> Akshay Gona. Built with
+            HTML, CSS, and a lot of coffee.
+          </div>
+          <div>
+            <a
+              href="https://github.com/akshaygona/akshaygona-portfolio"
+              target="_blank"
+              rel="noopener"
+              >Source</a
+            >
+          </div>
+        </div>
+      </div>
     </footer>
+
     <script src="script.js"></script>
   </body>
 </html>
